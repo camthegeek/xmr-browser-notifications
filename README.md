@@ -6,6 +6,10 @@ Powered by push.js by Nickersoft (https://github.com/Nickersoft/push.js)
 Not very optimized for customization.
 Works as intended.
 
+# Demonstration
+https://camthegeek.net/xmr/alert/ 
+Only works on pools with API secured by SSL. If your webserver does not enforce SSL, you can test with any pool!
+
 # Installation
 Download and extract all files to /www or /public_html directory on whatever webhost you use.
 Navigate browser to where you placed files.
@@ -18,3 +22,13 @@ Wait for notifications.
 Previously stated not easily customizable.
 Edit files as needed to change block alert durations, etc.
 
+# Integration
+Currently testing with popular pool software cryptonote-universal-pool (https://github.com/fancoder/cryptonote-universal-pool)
+Currently testing integration with Slack (http://slack.com). Will have code released soon.
+
+# Usage
+Anyone can use. If you make changes, leave me a credit somewhere.
+
+# Appreciation
+Send your appreciation in the form of Monero over to
+4Ah6e5exEWfNC9fGZV2zga6PGX79M7yX3jYytigs4XHubWfqnoLurHrNwtUp9tVWpdfQ2iZqnEyNA2ckq5iXJthLFvgBcxc
