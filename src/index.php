@@ -67,6 +67,9 @@
 							<option name="MoneroPool.com" value="https://api.moneropool.com/stats">MoneroPool.com</option>
 							<option name="MoneroHash.com" value="https://monerohash.com/api/stats">MoneroHash.com</option>
 							<option name="Crypto-pool.FR" value="https://monero.crypto-pool.fr:8091/stats">Monero Crypto-Pool.fr</option>
+							<option name="XMR.PoolTo.Be" value="https://xmr.poolto.be:8120/stats">XMR.PoolTo.be</option>
+							<option name="XMRPool.EU" value="http://94.23.251.22:8117/stats">XMRPool.eu</option>
+							<option name="MineXMR.com" value="http://stats.minexmr.com/stats">MineXMR.com</option>
 						</select>
 					</p>
 					<p><span id="selectedPool"></span></p>
