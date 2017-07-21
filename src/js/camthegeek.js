@@ -21,12 +21,12 @@
 		Push.Permission.request(gotPermission, gotDenied);
 	}
 	function gotPermission() {
-		console.log('Permission granted to annoy user with notifications when a block is found!'); 
+		console.log('Permission granted to send user notifications when a block is found!'); 
 		$("#uagreed").text("Everything is setup on your end! Pin this tab and don't close your browser! I'll let you know when something is found!");
 		$('#yunoagree').hide();
 	}
 	function gotDenied() { 
-		console.log('Permission denied! They must not want to be notified. If they want to change, I am not telling them how to accept me!');
+		console.log('Notifications were denied!');
 		$("#yunoagree").text("You should have accepted notifications. Now, you won't get notified when a block is found!");
 	}
 	$(document).ready(function () {	
@@ -35,10 +35,9 @@
 			pname = $('#pools option:selected').attr('name');
 			if (pname != "stop") { 
 				stopBlocks();
-				console.log(pname);
-				console.log('Pool checking has been initiated..');
+				console.log('Now monitoring ' +pname+ ' for blocks!');
 				blockCheck();
-				blockChecker = setInterval(blockCheck, 180000);
+				blockChecker = setInterval(blockCheck, 300000);
 				}
 			if (pname == "stop") { 
 				console.log('Stopping');
@@ -71,14 +70,14 @@
 					var now = new Date($.now());
 					var diff = Math.abs(foundDate-now);
 					var minutes = Math.floor((diff/1000)/60);
-					if (minutes <= "4") { 
+					if (minutes <= "5") { 
 						Push.create('Block Found on ' + pname + '!', {
  							body: 'A block was found at ' + foundDateLocal + ' woot!',
  							icon: 'monero.png',
  							requireInteraction: 'true'
  						});
 					}
-					if (minutes >= "5") { 
+					if (minutes >= "6") { 
 						console.log('Its been over 5 minutes since block was found.');	
 					}
 				}
@@ -92,14 +91,14 @@
 					var now = new Date($.now());
 					var diff = Math.abs(foundDate-now);
 					var minutes = Math.floor((diff/1000)/60);
-					if (minutes <= "4") { 
+					if (minutes <= "5") { 
 						Push.create('Block Found on ' + pname + '!', {
  							body: 'A block was found at ' + foundDateLocal + '.',
  							icon: 'monero.png',
  							requireInteraction: 'true'
  						});
 					}
-					if (minutes >= "5") { 
+					if (minutes >= "6") { 
 						console.log('Its been over 5 minutes since a block was last found.');
 					}
 				}
