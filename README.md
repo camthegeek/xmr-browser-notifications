@@ -9,9 +9,11 @@ When a block is found on selected pool, you will receive one or more browser bas
 - Not very optimized for customization.
 - Works as intended.
 
-# Demonstration
-https://camthegeek.net/xmr/alert/ 
+# Demonstration(s)
+- https://camthegeek.net/xmr/alert/ 
 - Only works on pools with API secured by SSL. If your webserver does not enforce SSL, you can test with any pool!
+- http://webguru.xyz/xmr/
+- Non-http host; all pools work as intended.
 
 # Installation
 - Download and extract all files from src/ to /www or /public_html directory on whatever web host you use.
